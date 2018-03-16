@@ -8,3 +8,5 @@ function position(letter){
 
   return `Position of alphabet: ${indexNum}`;
 }
+
+// position = l => `Position of alphabet: ${l.charCodeAt() - 96}`;
