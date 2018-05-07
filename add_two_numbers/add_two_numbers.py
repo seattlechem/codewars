@@ -10,18 +10,30 @@ class ListNode:
         self.next = None
 
 
-def addTwoNumbers(self, l1, l2):
+def addTwoNumbers(l1, l2):
     """Add two values of linked lists and return a new linked list."""
-    current = l1.head
-    current2 = l2.head
-    l3 = ListNode(0)
-    result = l3.head
+    x1 = ''
+    x2 = ''
 
-    while current and current2:
-        result.val = current.val + current2.val
-
+    current = l1
+    while current:
+        x1 += str(current.val)
         current = current.next
-        current2 = current2.next
+
+    current = l2
+    while current:
+        x2 += str(current.val)
+        current = current.next
+
+    x1 = x1[::-1]
+    x2 = x2[::-1]
+
+    y = int(x1) + int(x2)
+    y = str(y)
+    y = y[::-1]
+
+    head = result = ListNode(y[0])
+    for i in range(1, len(y)):
+        result.next = ListNode(y[i])
         result = result.next
-    
-    return result
+    return head
