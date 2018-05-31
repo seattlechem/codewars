@@ -3,6 +3,9 @@
 
 def find_even_index(arr):
     """Return the index where sum of both sides are equal."""
+    if len(arr) == 0:
+        return 0
+
     for i in range(0, len(arr)):
         sum1 = 0
         sum2 = 0
