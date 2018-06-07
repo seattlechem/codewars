@@ -3,7 +3,7 @@ from fibonacci_fizzbuzz import fibs_fizz_buzz
 
 
 def test_basic():
-    """basic test cases."""
+    """Basic test cases."""
     assert fibs_fizz_buzz(5) == [1, 1, 2, 'Fizz', 'Buzz']
     assert fibs_fizz_buzz(7) == [1, 1, 2, 'Fizz', 'Buzz', 8, 13]
     assert fibs_fizz_buzz(10) == [1, 1, 2, 'Fizz', 'Buzz', 8, 13, 'Fizz', 34,
