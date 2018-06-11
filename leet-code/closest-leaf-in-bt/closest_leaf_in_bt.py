@@ -1,4 +1,5 @@
 """."""
+import collections
 
 
 def find_closest_leaf(root, k):
@@ -7,8 +8,8 @@ def find_closest_leaf(root, k):
     :input: root and int k
     :output: int
     """
-    # neighbors dictionary
-    neighbors = {}
+    # neighbors in defaultdict
+    neighbors = collections.defaultdict(list)
     # leaves: list, store leaf int values
     leaves = []
 
@@ -31,4 +32,23 @@ def find_closest_leaf(root, k):
             neighbors[node.right.val].append(node.val)
             traverse(node.right, neighbors, leaves)
 
-
+    traverse(root, neighbors, leaves)
+    q, lookup = [k], set([k])
+    while q:
+        next_q = []
+        for u in q:
+            # if k is found in leaves
+            # it means closest leaf is the int k itself b/c k is a leaf
+            if u in leaves:
+                return u
+            # if a given k is in neighbors
+            for v in neighbors[u]:
+                # if neighbors[u] has a value of a list with
+                # single element k: [k]
+                if v in lookup:
+                    continue
+                # lookup is a set, so add is used
+                lookup.add(v)
+                next_q.append(v)
+            q = next_q
+        return 0
