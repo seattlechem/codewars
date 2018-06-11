@@ -2,6 +2,16 @@
 import collections
 
 
+class Node(object):
+    """Node class definition."""
+
+    def __init__(self, x):
+        """Node class constructor."""
+        self.val = x
+        self.left = None
+        self.right = None
+
+
 def find_closest_leaf(root, k):
     """Find closest leaf of a given value in binary tree."""
     """
