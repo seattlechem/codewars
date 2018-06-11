@@ -6,7 +6,6 @@ class Node(object):
     """Node class definition."""
 
     def __init__(self, x):
-        """Node class constructor."""
         self.val = x
         self.left = None
         self.right = None
@@ -21,11 +20,12 @@ def find_closest_leaf(root, k):
     # neighbors in defaultdict
     neighbors = collections.defaultdict(list)
     # leaves: list, store leaf int values
-    leaves = []
+    leaves = set()
 
     def traverse(node, neighbors, leaves):
         """Traverse binary tree to find the leaves."""
         # if node is not True, if node is None?
+        import pdb; pdb.set_trace()
         if not node:
             return
         # node left and right do not exist, which means it is a leaf
@@ -43,10 +43,10 @@ def find_closest_leaf(root, k):
             traverse(node.right, neighbors, leaves)
 
     traverse(root, neighbors, leaves)
-    q, lookup = [k], set([k])
+    qu, lookup = [k], set([k])
     while q:
-        next_q = []
-        for u in q:
+        next_qu = []
+        for u in qu:
             # if k is found in leaves
             # it means closest leaf is the int k itself b/c k is a leaf
             if u in leaves:
@@ -59,6 +59,6 @@ def find_closest_leaf(root, k):
                     continue
                 # lookup is a set, so add is used
                 lookup.add(v)
-                next_q.append(v)
-            q = next_q
+                next_qu.append(v)
+            qu = next_qu
         return 0
