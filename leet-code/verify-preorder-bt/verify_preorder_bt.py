@@ -35,8 +35,8 @@ def verify_preorder(root, arr):
         if node.right:
             traverse(node.right)
 
-        traverse(root)
+    traverse(root)
 
-        if veri_list == arr:
-            return True
-        return False
+    if veri_list == arr:
+        return True
+    return False
