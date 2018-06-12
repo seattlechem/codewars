@@ -40,3 +40,17 @@ def verify_preorder(root, arr):
     if veri_list == arr:
         return True
     return False
+
+
+def verify_preorder_o1(preorder):
+    """Verify if given array is a preorder traversal of binary tree."""
+    low, i = float('-inf'), -1
+    for p in preorder:
+        if p < low:
+            return False
+        while i >= 0 and p > preorder[i]:
+            low = preorder[i]
+            i -= 1
+        i += 1
+        preorder[i] = p
+    return True
