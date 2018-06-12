@@ -45,12 +45,13 @@ def verify_preorder(root, arr):
 def verify_preorder_o1(preorder):
     """Verify if given array is a preorder traversal of binary tree."""
     low, i = float('-inf'), -1
-    for p in preorder:
-        if p < low:
+    import pdb; pdb.set_trace()
+    for k in preorder:
+        if k < low:
             return False
-        while i >= 0 and p > preorder[i]:
+        while i >= 0 and k > preorder[i]:
             low = preorder[i]
             i -= 1
         i += 1
-        preorder[i] = p
+        preorder[i] = k
     return True
