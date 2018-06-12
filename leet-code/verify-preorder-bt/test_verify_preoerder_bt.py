@@ -12,3 +12,8 @@ root.left.left = Node(35)
 def test_true():
     """True test case."""
     assert verify_preorder(root, [40, 30, 35, 80, 100]) is True
+
+
+def test_false():
+    """Test false case."""
+    assert verify_preorder(root, [40, 30, 80, 35, 100]) is False
