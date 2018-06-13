@@ -8,3 +8,9 @@ function isPalindrome(line) {
   line = ("" + line);
   return line === reversed;
 }
+
+// best practice solution
+function isPalindrome(line) {
+  return (String(line) === String(line).split('').reverse().join('') );
+}
+
