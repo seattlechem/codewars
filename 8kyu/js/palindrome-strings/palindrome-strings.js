@@ -14,3 +14,11 @@ function isPalindrome(line) {
   return (String(line) === String(line).split('').reverse().join('') );
 }
 
+//  using every()
+function isPalindrome(line) {
+  line = String(line).split("");
+  return line.every((char, i) => {
+    return char === line[line.length - i - 1];
+  })
+}
+
