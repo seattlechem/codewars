@@ -12,3 +12,10 @@ def reverse_invert(lst):
                 e = e * - 1
             res.append(math.copysign(int(str(e)[::-1]), sign * - 1))
     return res
+
+
+def other_reverse_invert(lst):
+    """Best practice solution from codewars."""
+    from math import copysign as sign
+    return [-int(sign(int(str(abs(x))[::-1]), x)) for x in lst
+            if isinstance(x, int)]
