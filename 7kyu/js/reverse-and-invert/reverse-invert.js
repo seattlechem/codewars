@@ -11,5 +11,5 @@ function reverseInvert(array){
 function otherReverseInvert(array) {
   return array
     .filter(n => Number.isInteger(n))
-    .map(n => -Math.sign(n) * parseInt(String(n).split("").reverse().join(""), 10))
+    .map(n => -Math.sign(n) * parseInt(String(n).split("").reverse().join(""), 10));
 }
