@@ -1,13 +1,20 @@
 """Test cases."""
-from sorted_ll_to_bst import LinkedList, convert_ll_bst
+from sorted_ll_to_bst import LinkedList, Convert
+import pytest
 
 
-head = LinkedList(1)
-head.next = LinkedList(2)
-head.next.next = LinkedList(3)
-
-
-def test_true():
+@pytest.fixture
+def simply_ll():
     """."""
-    res = convert_ll_bst(head)
-    assert res.val == 1
+    heady = LinkedList(1)
+    heady.next = LinkedList(2)
+    heady.next.next = LinkedList(3)
+    return heady
+
+
+def test_true(simply_ll):
+    """."""
+    res = Convert().sorted_list_to_bst(simply_ll)
+    assert res.val == 2
+    assert res.left.val == 1
+    assert res.right.val == 3
