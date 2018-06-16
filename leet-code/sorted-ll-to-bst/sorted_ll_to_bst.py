@@ -29,7 +29,6 @@ class Convert:
     def sorted_list_to_bst(self, head):
         """Figure out length of ll."""
         current, length = head, 0
-        # import pdb; pdb.set_trace()
         while current is not None:
             current, length = current.next, length + 1
         self.head = head
@@ -37,7 +36,6 @@ class Convert:
 
     def sorted_list_to_bst_recur(self, start, end):
         """Convert a ll to bst."""
-        # import pdb; pdb.set_trace()
         if start == end:
             return None
         mid = math.floor(start + (end - start) / 2)
