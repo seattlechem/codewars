@@ -14,3 +14,4 @@ def test_true(first_bst):
     """Test true."""
     result = lca_bst(first_bst, Node(2), Node(8))
     assert result.val == 6
+    assert lca_bst(first_bst, Node(2), Node(4)).val == 2
