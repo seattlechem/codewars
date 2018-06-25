@@ -17,5 +17,6 @@ def test_true(simple_ll):
     """True test case."""
     assert simple_ll.head.val == 85
     assert isinstance(simple_ll, LinkedList) is True
-    result = simple_ll.reverse_iterative()
-    assert isinstance(result, LinkedList) is True
+    # import pdb; pdb.set_trace()
+    simple_ll.reverse_iterative()
+    assert simple_ll.head.val == 20
