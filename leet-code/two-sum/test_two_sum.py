@@ -1,5 +1,4 @@
 """Test cases."""
-import pytest
 from two_sum import two_sum
 
 
