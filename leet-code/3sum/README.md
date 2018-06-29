@@ -17,3 +17,4 @@ A solution set is:
   [-1, -1, 2]
 ]
 ```
+[solution ref](https://leetcode.com/problems/3sum/discuss/7463/Simple-Python-solution-(easy-to-understand))
