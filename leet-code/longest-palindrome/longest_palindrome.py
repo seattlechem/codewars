@@ -5,7 +5,8 @@ def longest_palindrome(s):
     """."""
     n = len(s)
     table = [[0 for x in range(n)] for y in range(n)]
-    # max_length = 1
+
+    max_length = 1
     for i in range(n):
         table[i][i] = True
 
@@ -19,7 +20,6 @@ def longest_palindrome(s):
             max_length = 2
         i = i + 1
 
-    # max_length > 2
     k = 3
     while k <= n:
         i = 0
@@ -32,6 +32,6 @@ def longest_palindrome(s):
                     start = i
                     max_length = k
             i = i + 1
-    k = k + 1
+        k = k + 1
 
     return s[start:start + max_length]
