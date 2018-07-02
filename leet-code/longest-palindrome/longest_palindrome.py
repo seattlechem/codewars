@@ -4,7 +4,7 @@
 def longest_palindrome(s):
     """."""
     n = len(s)
-    table = [[]]
+    table = [[0 for x in range(n)] for y in range(n)]
     # max_length = 1
     for i in range(n):
         table[i][i] = True
@@ -25,7 +25,7 @@ def longest_palindrome(s):
         i = 0
         while i < n - k + 1:
             j = i + k - 1
-            if s[i + 1][j - 1] and s[i] == s[j]:
+            if table[i + 1][j - 1] and s[i] == s[j]:
                 table[i][j] = True
 
                 if k > max_length:
@@ -34,4 +34,4 @@ def longest_palindrome(s):
             i = i + 1
     k = k + 1
 
-    return s[start:start + max_length - 1]
+    return s[start:start + max_length]
