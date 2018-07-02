@@ -15,3 +15,5 @@ Example 2:
 Input: "cbbd"
 Output: "bb"
 ```
+
+[geeks for geeks](https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/)
