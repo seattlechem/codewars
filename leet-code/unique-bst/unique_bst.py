@@ -3,7 +3,7 @@
 
 def numTrees(self, n):
     """
-    .
+    O(n^2) / O(n).
 
     :type n: int
     :rtype: int
