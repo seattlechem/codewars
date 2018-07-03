@@ -1,7 +1,7 @@
 """Number of unique binary trees."""
 
 
-def numTrees(self, n):
+def numTrees(n):
     """
     O(n^2) / O(n).
 
