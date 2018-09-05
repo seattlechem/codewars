@@ -100,4 +100,9 @@ ENV/
 # mypy
 .mypy_cache/
 
+<<<<<<< HEAD
 .vscode/
+=======
+# pytest
+.pytest_cache
+>>>>>>> bdee0b72242533a6bd6edfd6c8cf703994294317
