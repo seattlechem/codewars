@@ -147,6 +147,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.vscode/
+
+# pytest
+.pytest_cache
 
 #ansible
 hosts
