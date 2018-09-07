@@ -5,6 +5,7 @@
 
 | Date | Title | Source |
 |:--|:--|:--|
+| 09/07/2018 | Longest Word in Dictionary through Deleting |[Leet](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/description/)|
 | 09/05/2018 | Lowest Common Ancestor of a Binary Search Tree |[Leet](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)|
 | 09/04/2018 | Longest Substring Without Repeating Characters |[Leet](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)|
 | 07/04/2018 | House Robber |[Leet](https://leetcode.com/problems/house-robber/description/)|
